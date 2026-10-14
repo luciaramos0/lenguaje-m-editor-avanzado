@@ -1,4 +1,4 @@
-let
+``` let
     // Paso 1: Fuente de datos original
     Origen = Table.FromRows(
     {
@@ -44,4 +44,4 @@ let
         }
     )
 in
-    TiparColumnas
+    TiparColumnas ```
