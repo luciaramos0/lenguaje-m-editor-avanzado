@@ -25,6 +25,13 @@ Ejemplos de errores:
 |-----------|----------------------|
 | Text.Trim |	Espacios en blanco al inicio y al final del texto. No toca los del medio. |
 | Text.Clean | Caracteres de control no imprimibles (saltos de línea, tabuladores, retornos de carro) en cualquier posición del texto. |
+Ejemplos:
+```
+Text.Trim("  Mouse Logitech  ")   // "Mouse Logitech"
+Text.Trim("Mouse   Logitech")     // "Mouse   Logitech" (no cambia los del medio)
+Text.Clean("Mouse#(lf)Logitech")  // "MouseLogitech" (quita el salto de línea)
+```
+Se usan para problemas distintos: Text.Trim para espacios sobrantes en los bordes, y Text.Clean para caracteres invisibles que suelen venir de exportaciones de sistemas legacy.
 
 ---
 
