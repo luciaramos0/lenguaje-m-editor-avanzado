@@ -1,7 +1,6 @@
 # Lenguaje M en el Editor Avanzado: limpieza de datos sin usar la interfaz gráfica
 
 Script en lenguaje M que limpia un archivo de ventas exportado de un sistema legacy.
-> Nota: el paso `Origen` es un placeholder y no corre sin modificarlo.
 
 ### ¿Qué hace exactamente el bloque let...in en lenguaje M? ¿Por qué cada paso puede referenciar al anterior?
 let ... in es la estructura básica de una consulta M. Entre let e in se definen variables (los pasos), y después de in se indica cuál de ellas es el resultado final de la consulta.
