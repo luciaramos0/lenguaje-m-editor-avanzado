@@ -1,8 +1,12 @@
 let
     // Paso 1: Fuente de datos original
-    // Reemplazar por tu propia fuente de datos (Excel, CSV, base de datos, etc.)
-    // La tabla debe tener 5 columnas: id_venta, nombre_producto, categoria, precio, fecha_venta
-    Origen = Table.FromRows(...),
+    Origen = Table.FromRows(
+    {
+        {"id_venta", "nombre_producto", "categoria", "precio", "fecha_venta"},
+        // acá las filas de tu tabla del enunciado, tal cual
+    },
+    type table [Columna1 = text, Columna2 = text, Columna3 = text, Columna4 = text, Columna5 = text]
+    ),
 
     // Paso 2: Promover la primera fila como encabezados
     PromoverEncabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
